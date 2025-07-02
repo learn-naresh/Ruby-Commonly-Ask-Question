@@ -1,0 +1,978 @@
+Question 1- what is mvc ?
+ans : mvc stands for model, view , controller where model is responsible for business data and logic.
+
+Question 2- what is orm?
+Ans: ActiveRecord is the default ORM library used in Ruby on Rails. It helps us interact with the database using Ruby objects, without having to write SQL queries.
+
+Question 3- What is rake?
+Ans: Rake is a popular task runner for Ruby and Rails applications. For example, Rails provides the predefined Rake tasks for creating databases, running migrations, and performing tests. rake will be faster because you don't need to load the whole rails application.
+
+Question 4- What is scaffolding?
+Ans: Rails scaffolding is a quick way to generate some of the major pieces of an application. If you want to create the models, views, and controllers for a new resource in a single operation, scaffolding is the tool for the job.
+
+Question 5- what is routing/what is restful routing?
+Ans: In Rails, a restful route provides a mapping between HTTP verbs and URLs to controller actions. By convention, each action also maps to a specific CRUD operation in a database. 
+
+Question 6- what is Migration in rails ?
+Ans: Rails provides a domain-specific language for managing a database schema called migrations.
+
+Question 7- what is active storage?
+Ans: Active Storage facilitates uploading files to a cloud storage service like Amazon S3, Google Cloud Storage, or Microsoft Azure Storage and attaching those files to Active Record objects.
+ 
+Question 8- What is ruby on rails?
+Ans: Ruby is a dynamic, open source, object oriented and reflective programming language.
+on Rails is an open-source web application development framework written in the Ruby programming language.
+
+Question 9 - how would you define mvc architecture in the context of ruby on rails?
+Ans: Rails has an application directory called app/ with three subdirectories: models, views, and controllers. This is the model-view-controller (MVC) architectural pattern, which enforces a separation between business logic from the input and presentation logic associated with a graphical user interface (GUI).
+
+Question 10- what is model?
+ans: Model
+The models are classes in Rails. They interact with database, store data, handles validation, transaction, etc.
+
+Question 11- what is view?
+Ans: View represent data in a particular format in an application for the users. It handles HTML, CSS, JavaScript and XML in an application. They do what controller tells them.
+
+Question 12- what is controller?
+ans: Controller
+Controller directs traffic to views and models. It query models for data from the database and display the desired result with the help of view in an application.
+
+
+Question 13- Can you explain the purpose of migration in rails?
+Ans: in Rails Migration is a tool that allows the developer to use Ruby to change an application's database schema. Instead of using SQL scripts, we use Ruby code,
+Rails Migration changes the database structure. A migration can change the name of a column in books table.
+Question 14- how would you implement authentication and authorization in a rails application?
+Ans: Authentication-
+Step 1 — Creating a New Rails Application.
+Step 2 — Creating a Landing Page.
+Step 3 — Installing and Configuring Devise.
+Step 4 — Creating the User Model with Devise.
+Step 5 — Linking Authentication to the Landing Page.
+for authentication i use devise gem and what resources a given user is allowed to access for i'm using rollify gem.
+
+Question 15- What is authentication and authorization in Rails?
+Ans: Authentication is the process of verifying who you are. Authorization is the process of verifying that you have access to resources.
+
+Question 16- what is purpose of gemfile in rails applications?
+Ans: The Gemfile is the place where all your app’s gem dependencies are declared.. A Gemfile should always be placed in the root of the project directory.
+
+Question 17- What is docker?
+Ans: Docker is a software platform that allows you to build, test, and deploy applications quickly. Docker packages software into standardized units called containers that have everything the software needs to run including libraries, system tools, code, and runtime.
+
+Question 18 - What is sidekiq?
+Ans: Sidekiq is described as a “well-known queue processing software”. It's used by Ruby applications needing to run tasks in the background, and not in the web requests handling time.
+
+Question 19 - What is reddis?
+Ans: Redis enables you to write traditionally complex code with fewer, simpler lines. With Redis, you write fewer lines of code to store, access, and use data in your applications. 
+
+Question 20- what is Github?
+Ans: GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+Question 21- what is RSpec?
+Ans: RSpec is a testing tool for Ruby, created for behavior-driven development (BDD). It is the most frequently used testing library for Ruby in production applications.
+
+Question 22- what is Resque?
+Ans:Resque is a Redis-backed Ruby library for creating background jobs, placing them on multiple queues, and processing them later.
+
+Question 23- what is mocking?
+Ans: Mocking means creating a fake version of an external or internal service that can stand in for the real one.
+
+
+Question 24- what is restful API?
+Ans: RESTful API is an interface that two computer systems use to exchange information securely over the internet. 
+
+Question 25- What is active record?
+Ans: Rails Active Records provide an interface and binding between the tables in a relational database and the Ruby program code that manipulates database records.
+
+Question 26- how would you write custom validation in rails/active record validation?/ why use validation?
+Ans: Validations are used to ensure that only valid data is saved into your database. For example, it may be important to your application to ensure that every user provides a valid mobile number and format of an email should be correct, presence of name should be there, for a note minimum length must be taken care of. Model-level validations are the best way to handle validations in rails application.
+
+Question 27- what is the purpose of routes rb file?
+ans:The routes. rb file defines the actions available in the applications and the type of action such as get, post, and patch.
+
+Question - what is the purpose of the rails router?
+Ans:The Rails router recognizes URLs and dispatches them to a controller's action.
+
+Question 28- what is the purpose of the asset pipeline in rails?
+Ans: The asset pipeline provides a framework to concatenate and minify or compress JavaScript and CSS assets. It also adds the ability to write these assets in other languages such as CoffeeScript, Sass and ERB.
+
+
+Question 29- can you explain the purpose of rails console?
+ans: Rails console is a tool that lets developers interact with their Ruby on Rails applications using text commands, rather than a graphical interface.
+It allows them to view and modify data in the application's database, test code, and fix errors, among other things.
+
+Question 30- What is the purpose of fixtures in Rails testing?
+Ans: Fixtures are a way to create sample data that can be used for testing.fixtures are typically defined in YAML files and can be loaded into the database using the the 'rake db:fixtures:load' command.
+
+Question 31- How would you write a test in Rails?
+Ans: we can run a single test file by passing the bin/rails test command the filename containing the test cases.
+
+Question 32- what is chaching in rails?
+Ans: Rails caching is a technique where entire action output is stored as an HTML file. Due to this, web server can serve the output without going through Rails to call the action again. As a result, it improves the performance.
+
+Question 33- What is the purpose of the database.yml file in a Rails application?
+Ans:yml file is used by Rails to connect to the appropriate database for the current Rails environment. 
+
+Question 34-How would you implement a background job in a Rails application?
+Ans: There are several different ways to implement background jobs in Ruby on Rails. The most common approach is using a gem such as Sidekiq, Delayed Job, or many more, which provides a simple and efficient way to manage your background jobs. These gems make it easy to enqueue jobs, set priorities, and track their progress.
+
+Question 35- How would you handle exceptions in a Rails application?
+Ans: Exception handling in Ruby on Rails is similar to exception handling in Ruby. Which means, we enclose the code that could raise an exception in a begin/end block and use rescue clauses to tell Ruby the types of exceptions we want to handle.
+    
+Question 36-.Can you explain the purpose of the Gemfile.lock file in a Rails application?
+Ans: The Gemfile.lock allows you to specify the versions of the dependencies that your application needs in the Gemfile. The Gemfile.lock file is where Bundler records the exact versions that were installed. 
+
+Question 37- what is resourceful routing?
+Ans: Resource Routing: the Rails Default Resource routing allows you to quickly declare all of the common routes for a given resourceful controller. A single call to resources can declare all of the necessary routes for your index, show, new, edit, create, update, and destroy actions.
+
+Question 38- What is the purpose of the rake routes command in Rails?
+Ans: rake routes will list all of your defined routes, which is useful for tracking down routing problems in your app, or giving you a good overview of the URLs in an app you're trying to get familiar with.
+
+Question 40- Can you explain the difference between a has_many: through and has_and_belongs_to_many association in Rails?
+Ans: the main difference between the two approaches is that in a has_many :through relationship, the JOIN table has its own model, while a has_and_belongs_to_many relationship has no JOIN model, just a database table.
+
+Question 41- What is Associations?
+Ans: In Rails, an association is a connection between two Active Record models. Why do we need associations between models? Because they make common operations simpler and easier in your code.
+
+Question 42- What are the different types of associations in Rails?
+Ans: Rails supports six types of associations:
+1.belongs_to
+2.has_one
+3.has_many
+4.has_many :through
+5.has_one :through
+6.has_and_belongs_to_many
+
+Question 43- Explain ActiveRecord and how it is used in Rails?
+Ans: Active Record is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic. Active Record facilitates the creation and use of business objects whose data requires persistent storage to a database.
+
+Question 44- Explain the difference between a gem and a plugin in Rails?
+Ans: A gem is just ruby code. It is installed on a machine and it's available for all ruby applications running on that machine. Rails, rake, json, rspec ” are all examples of gems. Plugin is also ruby code but it is installed in the application folder and only available for that specific application. 
+
+Question 45- Explain the difference between a GET and POST request in Rails.
+Ans: GET is used for fetching data, POST is used for submitting data. The biggest difference is that GET puts all the data in the URL (which can be limited in size), while POST sends it as a data part of the HTTP request.
+
+Question 46- what is gem?
+Ans:Ruby on Rails gems are libraries which allow any developer to add new functionalities without writing code.
+
+Question 47- what is schema?
+ans: A database schema defines how data is organized within a relational database.
+
+
+Question 48- what is jira?
+ans: JIRA is a bug tracking tool that allows software developers to plan, track and work faster. 
+
+Question 49- diffrence between model and migration ?
+ans: Rails Model supports ways to interact to with the database, while Rails Migration changes the database structure. A migration can change the name of a column in books table.
+
+
+Question 50- What is Haml?
+Ans: Haml (HTML Abstraction Markup Language) is a templating system that is designed to avoid writing inline code in a web document and make the HTML cleaner. Haml gives you the flexibility to have some dynamic content in HTML. 
+
+Question 51-What is Ruby on Rails? How does it differ from other web
+frameworks?
+Ans: Developers do not have to spend time on boilerplate code, and simple syntax help achieve more in fewer lines of code. Developers using Ruby on rails experience 30-40% faster software development time than other programming languages and supporting frameworks.
+
+Question 52-What are the key features of Ruby on Rails?
+Ans: 1. MVC Architecture. Ruby on Rails is based on the Model, View and Controller pattern, the widely used web application architecture. 
+2. Active Record. 
+3. Convention over Configuration. 
+4. Simple Testing Tool. 
+5. Automated Deployment. 
+6. Simple Programming Language.
+
+Question 53- Explain the difference between server-side and client-side validation in Rails.
+Ans: client-side validation can provide instant feedback to the user, while server-side validation can ensure that all data is validated correctly. By combining both approaches, you can create a robust validation system that ensures the integrity and security of your data.
+
+Question 54-Explain the difference between instance variables and local variables in Rails.
+Ans: A local variable can be used only within the method in which it is defined (or, when the variable is defined at the top level, only outside of any method). An instance variable can be used from any method that is called on the same instance.
+
+Question 55- What is the purpose of layouts in Rails?
+Ans: layout- A layout is something that we can include once in a single page and we can use the same layout to any number of pages. 
+partial -
+A partial view is something that we can include the same content any number of times in a single page(where it is required) and can be used in any number of pages.
+
+Question 56- Explain the difference between the development and production environments in Rails?
+Ans: You can think of environments as the context in which your code is running. During development, you're building and running the application on your local machine. Going to production is the process of making your application ready to be deployed and consumed by users. The production environment is the live version of your web application.
+
+Question 57- What is the purpose of Capistrano in Rails?
+Ans: Capistrano is a tool for deploying applications using deployment scripts. To perform deployments, you can use predefined tasks or create custom Rake tasks.
+
+Question 58- How do you deploy a Rails application to a web server?
+Ans:Clever Cloud allows you to deploy any Ruby on Rails application.
+
+Question 59- What is the purpose of the config folder in Rails?
+Ans: The configuration file config/application. rb and environment-specific configuration files (such as config/environments/production. rb ) allow you to specify the various settings that you want to pass down to all of the components. 
+
+Question 60- What is Sprockets in rails?
+Ans: Sprockets is a Ruby library for compiling and serving web assets. Sprockets allows to organize an application's JavaScript files into smaller more manageable chunks that can be distributed over a number of directories and files. 
+
+Question 61- Explain the difference between the asset pipeline and Sprockets in Rails.
+Ans: The asset pipeline provides a framework to concatenate and minify or compress JavaScript and CSS assets.
+
+Question 62- What is the purpose of the public folder in Rails?
+Ans: The public directory contains some of the common files for web applications. By default, HTML templates for HTTP errors, such as 404, 422 and 500, are generated along with a favicon and a robots. txt file.
+
+Question 63- How do you use AJAX in Rails?
+Ans: Ajax enables you to retrieve data for a web page without having to refresh the contents of the entire page.
+
+Question 64- What is turbolinks in rails?
+Ans: Turbolinks is a flexible and lightweight JavaScript library aimed to make your navigation through webpages faster.
+
+Question 65- How do you implement caching in a Rails application?
+Ans: You can create your own custom cache store by simply extending ActiveSupport::Cache::Store and implementing the appropriate methods. This way, you can swap in any number of caching technologies into your Rails application. To use a custom cache store, simply set the cache store to a new instance of your custom class.
+
+Question 66- What is the purpose of Action Cable in Rails?
+Ans: Action Cable seamlessly integrates WebSockets with 
+the rest of your Rails application. 
+Question 67- Explain the difference between WebSocket and HTTP in Rails?
+Ans: WebSocket is a real-time, bidirectional, event-driven communication protocol that provides persistent connections between clients and servers. HTTP is a request-response protocol that serves static resources and invokes server-side processing.
+
+Question 68- What is the purpose of Active Job in Rails?
+Ans: Active Job is a framework for declaring jobs and making them run on a variety of queueing backends. These jobs can be everything from regularly scheduled clean-ups, to billing charges, to mailings. Anything that can be chopped up into small units of work and run in parallel.
+
+Question 69- What is the purpose of Action Mailer in Rails?
+Ans: Action Mailer allows you to send emails from your application using a mailer model and views. It is a special kind of class that inherits from ActionMailer::Base , which provides the necessary methods and structure to send emails using Rails.
+
+Question-70 - what is concern? 
+In very easy words, a "concern" in Rails is like a reusable toolbox for common code. It helps keep things organized and avoids repeating the same code in different parts of your web application.
+
+Imagine you have similar tasks to do in different places. Instead of doing them over and over again, you create a toolbox with all the steps. Then, whenever you need to do those tasks, you simply use the toolbox.
+
+In Rails, a concern is that toolbox. It's a way to group together common tasks, like validations or methods, so you can easily share them among different parts of your app, like models or controllers. This makes your code cleaner, more efficient, and easier to maintain.
+
+Question-71 - What is helpers in rails ?
+Ans: helpers are used to extract complex logic out of the view so that you can organize your code better. 
+
+Question 72 - what is scopes in rails ?
+Ans- Scopes are custom queries that you can define and use in your Rails models. They allow you to define commonly used queries and reuse them throughout your application.
+
+Question 72 - what is scopes in rails ?
+Ans- Scopes are custom queries that you can define and use in your Rails models. They allow you to define commonly used queries and reuse them throughout your application.
+
+question 73 - What is Eager Loading?
+Ans: In Ruby on Rails, eager loading is achieved using the includes or preload methods when querying the database for records that have associations. 
+
+question 74 - diffrence between http and https?
+ans: The full form of HTTP is the Hypertext Transfer Protocol.The full form of HTTPS is Hypertext Transfer Protocol Secure. HTTP does not use encryption, which results in low security in comparison to HTTPS. HTTPS uses Encryption which results in better security than HTTP. HTTP speed is faster than HTTPS. HTTPS speed is slower than HTTP.
+
+Question - 75 - what is diffrence between render and redirect?
+ans: the render method is used to render a view template in rails , while the redirect method is used to redirect a user in new url or path.
+
+Question 76 - what is application controller in rails ?
+ans: The application controller is a base class for all controllers in rails application. it provides common functionality that is shared across all controllers, such as session management and authentication.
+
+Question 77 - what is chache? 
+Ans: chache is a temporary storage mechanism that stores data in a place where it can be accessed faster than it would be if it were stored in its orginal location. 
+
+Question 78 - what is session and cookies ? 
+ans: cookies are small text files that are stored in your web browser. websites use cookies to remember your preferences and keep you logged in. sessions are also used to keep track of user activity on website, but they are stored on the server side.
+
+==================Questions asked in Builder.ai================
+1. Rails caching
+2. Asses pipeline how it works
+3. Sidekiq
+4. Includes vs join
+5. Frequency count
+6. Class vs module
+7. Mixin
+8. Polymorphic relation
+9. How debugging works in rails
+10. Web socket
+11. Fingerprinting
+12. What is monkey patching
+13. SQL injection
+14. Callbacks
+15. Monkey patching
+16. Eager loading and lazy loading
+17. SQL queries
+18. Attr_accessor
+19. How to change rails project from 3 to 4 and 6 to 7 like that what will be the steps
+20. Manifest.js ke tree structure
+21. Autoloading in rails
+22. Active storage
+23. Redis
+
+====================Questions asked in Fifty Five Technologies=======================
+1. Data and code optimisation
+2. Caching
+3. Asset management
+4. Memory usage
+5. Web server configuration
+6. Monitoring and performance tool
+7. Regular benchmarking and testing
+8. Suppose 2 tables (user & order). Write an Active record to find users who don’t
+order anything.
+9. Create a new rails application and write an api take number and return fibonacci
+series but not a ruby program, write a restful api.
+10.How many ways we can do deployments.
+11. Session and Rails cache
+12.How the Rails works
+13.Active Job, Sidekiq 
+
+
+====================Questions asked in Persi =======================
+Round 1 
+1. Write a palindrome program for string “aabbcbbaa”
+2. What are validations
+3. Callbacks on model
+4. differe
+5. What is single table inheritance
+6. Difference between left outer join and full join
+7. Difference between proc & lambda. What their return type.
+8. Write sql query for 3rd highest salary
+9. Difference between find & find_by
+10. Explain prepend, extend , include
+Example:
+Module A
+def module_a
+puts ‘calling from module a’
+end
+end
+Module B
+def module_b
+Remove label Inbox from this conversation
+puts “calling from module b”
+end
+End
+Class C
+prepend A
+prepend B
+end
+c = C.new
+puts c
+
+11. Closures in ruby
+Round 2
+1. Write a program to check 2nd array is a subset of 1st array without predefined method
+Tell its complexity , and test cases
+Array_1 = [1,2,3,4,5] , Array_2 = [ 3,4]
+2. Middleware
+3. Single Table inheritance
+4. Rack, Rake
+5. Session & Cookie
+6. Tell us about the challenging task for you and you are role in it.
+7. What is polymorphism and explain it with real world example
+8. What is overloading and explain it with real world example.
+9. Difference * and ** in ruby
+10. What is metaprogramming and make a program for it by using
+attr_accessor
+11. What is yield
+12. What are filters
+13. What are callback and observers
+14. Have you worked on action cable?
+15. How the channels are working, If we are not using any third party
+then how communication is establishing and two users will able to do
+chat
+16. What & how is streaming in action cable?
+17. What are major difference between Rails 4 & Rails 5
+18. You are given two integer arrays nums1 and nums2, sorted in
+non-decreasing order, and two integers m and n, representing the
+number of elements in nums1 and nums2 respectively.
+Merge nums1 and nums2 into a single array sorted in non-decreasing
+order.
+The final sorted array should not be returned by the function, but
+instead be stored inside the array nums1. To accommodate this,
+nums1 has a length of m + n, where the first m elements denote the
+elements that should be merged, and the last n elements are set to 0
+and should be ignored. nums2 has a length of n.
+Example 1:
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+The result of the merge is [1,2,2,3,5,6] with the underlined elements
+coming from nums1.
+19. Retrieve the names of the top 10 users who have made the most
+orders, along with the count of their orders.
+
+Value Labs
+ID NAME MANAGER_ID SALARY
+1 JOE 3 60000
+2 JASON 4 70000
+3 CLINT nil 50000
+4 DANIEL nil 90000
+5 VANYA 4 100000
+We need to find an employee whose salary is more than the manager.
+Which association you will use and write sql and rails query.
+2. Explain difference between has_one through and
+has_one_belongs_to_many
+3. Design pattern you used in your projects
+
+=================Persistent L1========
+
+1. What is ruby on rails?
+2. String vs symbol
+3. User.create vs User.create!
+4. What are map,each,collect,select,inject,reduce,find,find_by also explain
+the difference.
+5. What is ORM?
+6. What is CSRF and how do we prevent it in the rails app?
+7. Callbacks vs observers.
+8. Explain devise gem.
+9. a = [{“a”: 10}, {“b”: 20}, {“c”: 30}]
+- create array with keys - [“a”, “b”, “c”]
+- create an array with values. [10,20,30]
+- get the sum of all the values- 60
+
+10. String = “I love ruby on rails I love ruby on rails”
+Create an array of words and avoid repetitive words.
+Output = [“I”, “love”, “ruby”, “on”, “rails”]
+
+13. Explain how many types of inheritance do ruby support?
+14. What are mixins?
+15. What is scaffolding? Explain the difference between dynamic and static
+scaffolding.
+16. What are joins?
+17. List out all the associations in rails.
+18. What is polymorphic association?
+19. What is a sweeper?
+20. What is garbage collection?
+21. What is yield?
+
+=============Softel Technologies=========
+1. What is yield?
+2. What is garbage collection
+3. Diff between gem & plugin
+4. What is migration
+5. Who you deploy your application to Heroku & amazon EC2.
+
+================Team Engine========== 
+1. Limitation of oops concept
+2. What are observers and callbacks
+3. Why skinny controller and fatty models
+4. What are solid principles and acronym
+5. Ascyronus call and how it handled by javascript
+6. What are initializers
+7. What is Metaprogramming and its benefits
+8. What are design patterns and which of them you used
+9. What are difference between length,count and size
+10 What is indexing in database and how you can do that
+11. How you familiar with source control and what practices you
+Followed
+12. How can you work when you got the production issue?
+13. What is Active Record?
+14. What tools you used for deployments?
+15. How Redis works?
+16. How many types gems you worked on?
+17. How many source control you are familiar with and what practices
+you followed.
+18. What good practice you followed while development
+19. What constraints and things you followed in database
+20. What way you followed when you are integrating your payment
+gateway
+21. What performances issue you figure out while working
+22. What is N+1 query
+
+==============Clechotech Indore========== 
+1. What is delete vs destroy.
+2. Rails 7 new updates.
+3. What is a rake task and how do we schedule it?
+4. What are scopes?
+5. What are the concerns?
+6. Difference between has_many :through and has_and_belongs_to_many.
+7. Difference between distinct and unique.
+8. What are Enums?
+9. Have you integrated stripe payment gateway? What version do you
+integrate? (was mentioned on my resume)
+10. Difference between form_for and form_with.
+11. What is git rebase?
+12. If you want to write a rspec for a controller, what will be the path?
+13. What is grafana? (was mentioned on my resume)
+14. Define API routes and normal routes.
+15. What is the use for authorization? Difference between cancancan gem
+and pundit gem.
+16. Nested forms.
+17. Monkey patching.
+
+====================Persitant Round-2===============
+
+1. read the data of csv file of user's data and store it in the data structures
+of ruby and then seach a particular record on the basis of user's phone
+_number.
+2. [{"a"=>23}, {"b"=>3}, {"a"=>4}, {"a"=>45}, {"c"=>8}]
+- on the basis of keys find the average of the value of keys considering the
+key’s value appearing to be the one time.
+
+====================Josh L1===============
+
+1. Descending the array
+2. An External Api returning data for all employee & complete annual
+year data. Check input & Output
+Employee Name - Richa
+Salary - 10,000
+Month - Feb
+Employee Name - Richa
+Salary - 10,000
+Month - March
+Employee Name - Ashwini
+Salary - 20,000
+Month - Feb
+Employee Name - Ashwini
+Salary - 20,000
+Month - March
+Output:
+Richa: 20,000
+Ashwini: 40,000
+3. Can array hold multiple hash
+4. Write a controller method code which is fetching all Employee
+recording and who would you store and make the output like this
+Output:
+Employee Name - Richa
+Salary - 10,000
+Month - Feb
+
+=================Genzeon -L1===============
+
+1. Have you idea about unit testing and testing tool
+2. Have you idea about e-commerce and retail based project
+3. Write a program to achieve polymorphism that have base class is
+shape and to calculate the area of circle, triangle & square
+4. What tools you have used for monitoring the logs
+
+=================Probomobi tech===============
+
+1. What is the difference between observers and callbacks.
+2. What is API versioning?
+3. What is CSRF?
+4. Difference between index method and find_index.
+5. Difference between after_save and after_commit.
+6. Stubbing vs mocking.
+7. Action Cable.
+8. Hash with indifferent access.
+9. What is strong parameters.
+10. What are class methods and scope.
+11. How rails implement ajax.
+12. Rake files.
+13. What are private methods and how we call it?
+14. Includes vs joins vs preload.
+15. Query to fetch the users record with duplicate emails.
+Ans:- User.group(:email).having('COUNT(email) > 1')
+16. Given 2 array arr1 = ["A", "B", "C"]
+arr2 = ["A", "P", "Q", "B", "C", "A", "D", "R"]
+Output = ["P", "Q", "A"]
+
+==================DianApps============
+
+1. Write the association between tables for online booking for books
+books
+users
+orders
+reviews
+2. What is Garbage Collection
+3. What is indexing and how its works
+4. Difference between include and extend
+5. What is metaprogramming
+6. Given an integer array nums, find three numbers whose product is
+maximum and return the maximum product.
+n = [1,2,3,4]
+Output: ans: 2*3*4 = 24
+
+========================Promobi tech============= 
+1. Explain 4 oops concept
+2. Difference between overloading & overriding
+3. Make a schema for it
+Exam:
+Questions type: true & false , mcq
+Association: Exam has many questions
+4. What is indexing? How will you decide which column need to be
+index
+5. Write the output of this
+Class XYZ
+def 1(2,3)
+end
+def 1(2,3,4)
+end
+end
+x = XYZ.new()
+x.1(1,2)
+x.1(1,2,3)
+
+6. What is ORM
+7. Explain MVC Architecture
+8. Explain how Devise works, which authentication you have worked
+9. Which encryption used devise for password
+10. Have you worked on hotwire?
+11. What are initialize methods
+12. What will be the output
+User.active.collect(&:address).compact.map(&:country).inject { |m, c|
+c.code }
+
+===================Encora Innovation Labs================ 
+1. Optimize the code
+class CommentsController < ApplicationController
+def users_comments
+Posts = Post.all
+comments = posts.map(&:comments).flatten
+@user_comments = comments.select do |comment|
+comment.author.username == params[:username]
+end
+end
+End
+2. Explain RestFul Apis
+3. What is Api Rate limiting
+4. Difference between polymorphic Association & Single Table
+Inheritance
+5. What is singleton class
+6. What are access modifiers
+7. How we can call private methods
+8. What is migration? Backend process when we hit the rake db:migrate
+9. Diff between find & find_by
+10. What is method missing
+11. What are http verbs?
+12. Diff between put & patch
+13. Diff between active record join & include what are the use cases
+when we can use them
+14. Difference between active record delete & destroy
+15. What is metaprogramming
+
+=====================feasible technologies====================
+1. Difference between save and save!
+2. Explain many-to-many associations. What is the difference between
+has_many :through and has_many_belongs_to.
+3. What is web server and application server.
+4. What is the use of “class_name” while defining associations.
+5. Tell me the output of the below code. ANS; 50,10
+class Surface
+attr_reader :s
+def initialize(x,y)
+@s = x * y
+end
+end
+class Volume < Surface
+attr_reader :v
+def initialize(x,y,z)
+super(x,y)
+@v = x y z
+end
+end
+a = Volume.new(2,5,5)
+puts "#{a.v},#{a.s}
+
+6. Tell me the out of the below code. ANS:- 1
+def foo (a, *b)
+p a
+end
+foo(1,2,3,4)
+6. Database transaction blocks
+7. SQL injections and how do we prevent it?
+9. Explain the flow of the rails application when the user hits the URL.
+10. Action Dispatch
+
+==============Nagaro (L1)===========
+1. What is the difference between Rails 6 and Rails 7?
+2. What is the difference between scope and class methods?
+3. Explain the differences between a symbol and a string in Ruby, and
+when to use each
+4. What is the use of ActiveRecord enums in Rails. How can you define
+and use enums in your models?
+5. What will be the output of the following?
+a = true && false
+b = true and false
+6. Write an Active Record query to find all users who have placed an order with
+amount greater than the average order amount.
+7. What is the difference between rebase and merge in git
+8. Implement a method that removes duplicates from an array without using
+Any built-in Ruby methods.
+
+==============Nagaro (L2)===========
+1. how to optimize rails app
+2. How did sidekiq integrated
+3. What is CSRF and how we prevent it
+4. What are partials and its syntax and file naming convention
+5. What is ORM?
+6. Difference between render & redirect
+7. What are naming convection and namespaces. 
+8. In the case of load balancers, if we session maintain on first server
+and request stack is full and now our control is in on second server
+then we get back the first server session.
+
+=====================Diatoz Banglore (L1)===============
+
+1. Does the ruby support all opps concept, if not what are they
+2. What are blocks , proc and lambda, use cases where you were use
+them and their difference
+3. What is yield and purpose of use
+4. What is method overloading and make an example and how we can
+achieve
+5. What are mixins
+6. Can we have same class name and same module name ? and
+include that module in same class
+7. How many gems you have worked around
+8. What are concerns
+9. What if we have Post model and same table present in the database
+table, but we don’t have the migration and not schema.rb, does the
+rails server up and user will able to see the data
+10. Explain how the rails works in the term of mvc architecture
+11. What is monkey patching?
+
+====================Valuelabs (L1)==================
+
+1. What are webservices
+2. What is stubing & mocking
+3. What are webserver and app servers and their examples
+4. What is CORS and how did we solve it
+5. What is default scope
+6. What is multithreading and give example
+7. Difference between process & thread
+8. What is lazy loading and eager loading
+9. Difference between find and find_by
+10. What is metaprogamming
+11. What is garbage collection
+12. If I make changes in routes.rb file and didn’t restart the server
+would the changes reflect
+13. Write a program for max_count of character X = "aabbaabcc"
+14. Pick the values from both array and take arr1 has key and arr 2
+has value X= "abcd" & Y="1234
+15. Write ruby program to calculate your age by taking the input of
+birthdate
+16. Write ruby for sum of all elements X = "12345"
+17. Write a ruby program for X = [1, 4, 7, 8,10,13] , output will be two
+different array one will containing even number another is odd
+numbers also print their sum
+18. One line program to check whether string is palindrone or not
+19. Write ruby to print the longest string X = ["abc", "ab", "asasasas"]
+Output will: asasasas
+
+====================Watermark (L1)===========
+1. What is the difference between polymorphic association and STI.
+2. Explain the flow of rails application.
+3. What is middleware?
+4. Does ruby support method overloading?
+5. Write a program to check whether the given string a = “abcde” is an
+anagram of another string b= “bceda”?
+6. By default ruby support which sorting? ANS- Quicksort
+
+=====================- MangoApps (L1)===============
+1. Write a ruby for string occurrence str = "Richaaaaaaa"
+2. Difference between git rebase & git merge
+3. What are attr_accessor
+4. According to ancestor chain if we call a method where the control
+goes where it will first find the method
+5. Write syntax for attr_accessor and its provided methods
+7. What are mixins
+8. What are include and extend and prepend
+9. Difference between protected and private
+10. Difference between public and private
+11. What are private methods
+12. What are lambda and proc and their difference
+13. What are strong parameters
+14. If we somehow strong parameters bypass how can we add the
+security
+15. What are concerns
+16. What are activerecord callbacks
+17. What will be execution preferences between validation and
+callback which one call first
+18. What are scope
+19. What is metaprogramming
+
+=================Watermark (L2) - Backend=============
+1. What is the difference between private and protected methods with
+real life examples?
+2. What is a singleton class explain with real life example.
+3. What are constraints?
+4. Difference between multithreading and multiprocessing with
+examples.
+5. What is redux in react?
+6. WAP to find the number whose sum should be equal to the targeted
+value
+a = [1,2,4,5,6,7], target_value = 9
+Output = [4,5]
+
+===================JustMind - (L1)===============
+1. If book is related to Library then what is relationship between 'plane'
+and 'airport’
+2. complete the series 2,5,10,17
+3. If APPLE is coded is 901512162 then how ORANGE is coded
+4. If all rosed are flowers and some flowers are fade quickly, can we
+conclude that some roses fades quicky
+5. Synonyms for "happy" include
+6. oppposite word for brave
+7. Complete the analogy
+Cat is kitten as dog is to ___
+8. Word Association: What word comes to mind when you hear 'ocean'
+9. Sentence Complete: The _____ sky streched endlessly above us,
+prmoising a beautigul day ahead
+10. Sentence structure: Running late for the meeting the report (was
+hastly finished /hastly finished by them
+11. paralleism - she enjoy hiking, swimming (to ride/riding) bicycles
+12. ruby program to print the prime numbers between lower range and
+upper range entered by user
+
+===============GSPANN (Banglore)===============
+
+1. Difference between rails 4 and rails 5
+2. What are strong parameters
+3. What are white-listing and black listing parameters
+4. What is ORM
+5. For example If I have a model with Person name then what will be in
+the migration files either it will be persons?
+6. Difference between Module and class
+7. Explain MVC
+8. Explain Docker and their known commands
+9. What are default callback
+
+=============Persistent (Indore)=============
+1. What are mixins
+2. Difference between Array and Hash
+3. What is Metaprograming? Have you worked in any metaprogramming
+condition
+4. Difference class eval and instance eval
+5. Difference between Load and Require
+6. Explain each, collect, select and map
+7. Difference between save and save!
+8. Explain MVC
+9. What are rake routes
+10. Difference between resource and resources
+11. Explain collection and member and in which scenario we used
+12. What are cookies and sessions
+13. What are strong parameters and what is whitelisting
+14. What is N+1 query and how we can avoid
+15. What are associations
+16. What is STI
+17. When a task and requirement, what is your approach
+
+=============Persistent=============
+
+1. What is Ruby on Rails
+2. Explain MVC Architecture
+3. What is ORM
+4. What is active record
+5. Explain callbacks and observers
+6. Explain proc and blocks
+7. Different between String and Symbol
+8. What is CSRF
+9. Difference between load and require
+10. Ruby on Rails which inheritance
+11. What are mixins
+12. Explain all associations
+13. Explain has_many and belongs_to
+14. What is Polymorhic Association
+15. Write example for it map, each, select, collect, inject, reduce, find
+in ruby
+16. Generate a ruby program random array between 1 to 10
+17. Remove the 2nd element and 4th element of ruby
+18. print without repeating words from string
+sentence = "I love ruby on rails and i love react"
+19. one array containing all keys another containing all values the sun
+of all the values
+20. in 1 to 1000 array, there is one missing number, how to find that
+missing
+21. Refactor the code
+class CommentsController < ApplicationController
+def users_comments
+posts = Post.all
+comments = posts.map(&:comments).flatten
+@user_comments = comments.select do |comment|
+comment.author.username == params[:username]
+end
+end
+end
+
+==============Globallogic=============
+1. What are concerns
+2. Difference between super and super()
+3. What are difference between gem and plugin
+4. A program for fibonacci series
+5. What are views in database
+6. Syntax for creating procedure
+7. Security in databases
+8. Searching methodolgies using in database
+9. How many routes will be make check below
+resources :post do
+member :comment do
+end
+collection :employee do
+end
+end
+
+==================Hexaware===========
+1. How many active record association
+2. Difference between truncate and drop in postgres
+3. Syntax for subquery in sql
+4. Write a query for joining 2 tables
+5. Write a program for exception handling
+6. Check string is palindrone or not
+7. Difference between super and super()
+
+==================200Ok===========
+
+1. What are concerns
+2. What is garbage collections
+3. Explain callbacks and filters(before_action & after_action)
+4. Optimize the code
+class articlesController < ApplicationController
+def index
+@articles = Article.all
+@comments = Comment.where(article_id: @articles.pluck(:id))
+end
+def create_article
+@article = Article.new(title: "Sample Title", body: "Sample Body")
+if @article.save
+redirect_to articles_path, flash: { success: "Article created successfully." }
+else
+redirect_to articles_path, flash: { error: "Failed to create article." }
+end
+end
+def update_article
+article = Article.find(params[:id])
+article.title = params[:new_title]
+article.save
+redirect_to articles_path
+end
+def delete_article
+Article.find(params[:id]).destroy
+redirect_to articles_path
+end
+End
+
+2. class UsersController < ApplicationController
+def index
+@sort_column = params[:sort_column].to_sym
+@direction = params[:direction].to_sym
+@users = User.order(@sort_column => @direction)
+end
+end
+will this code create an issue in application
+3. symbol cannot be garbage collected then what is the problem in the code
+
+============deqode======= 
+1. How will you call the parent class method using the child class object
+2. Diff private, public, protected(Not answered properly)
+3. Sidekiq, how redis is connected with Sidekiq (I have not answered properly)
+4. Tell me about your experience and projects with features on which we have worked on
+About my design files project asked about relation bw designs and invoices
+5. Polymorphic (user and picture, syntax as well)
+6.Callbacks
+7. How we can update column name before save(name = shubham to `admin_shubham`, just string manipulation)
+8. Diff bw include and extend
+9. How will permit extra parameters in the device
+10. Method overloading and overloading
+11. Create your own flatten method
+def flat_output(element)
+  if element.is_a?(String)
+    @output << element
+    return
+  end
+  element.each do |ele|
+    flat_output(ele)
+  end
+end
+
+arr.each do |element|
+ flat_output(element)
+
+12. What is Duck Typing?
+13. What is inheritance and explain multiple inheritance.
+14. Could you tell me what callbacks are? Could you explain in detail?
+15. Which design pattern have you used in your current project?
+16. Overloading and overriding.
+17. Explain Rails 7 new features.
+18. Explain member vs. collection routes.
+19. Put vs Patch
+20. How to define validation for a boolean value.
+21. What is around action?
+22. What is the difference between applications generated as rails new app_name – API and rails new appp_name? 
+23. What are routes?
+24. Explain overloading and how to use it.
+25. Introduce yourself and the projects you have worked on with the technologies you know.
+26. Which version of Rails have you worked on?
