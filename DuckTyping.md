@@ -90,3 +90,95 @@ end
 * Very natural in Ruby/Rails due to dynamic typing.
 
 Would you like an example related to Rails models or controllers?
+
+
+Absolutely! Here's a practical **Duck Typing** example using **Rails models and controllers**:
+
+---
+
+## 🦆 Duck Typing Example in Rails — Models and Controller
+
+### 👨‍👩‍👧 Scenario:
+
+You have two different models that can be "notified" — say `User` and `Admin`. Both implement a `notify` method, but they're **not** subclasses of each other and do **not** share a module.
+
+---
+
+### ✅ Models:
+
+```ruby
+# app/models/user.rb
+class User < ApplicationRecord
+  def notify(message)
+    puts "User notified with: #{message}"
+  end
+end
+
+# app/models/admin.rb
+class Admin < ApplicationRecord
+  def notify(message)
+    puts "Admin notified with: #{message}"
+  end
+end
+```
+
+---
+
+### ✅ Controller or Service Layer:
+
+```ruby
+# app/controllers/notifications_controller.rb
+class NotificationsController < ApplicationController
+  def send_notification
+    recipient = find_recipient(params[:type], params[:id])
+    message = params[:message]
+
+    if recipient.respond_to?(:notify)
+      recipient.notify(message)
+      render plain: "Notification sent!"
+    else
+      render plain: "Recipient can't be notified", status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def find_recipient(type, id)
+    case type
+    when "User"
+      User.find(id)
+    when "Admin"
+      Admin.find(id)
+    else
+      raise "Unknown recipient type"
+    end
+  end
+end
+```
+
+---
+
+### ✅ Sample Request:
+
+```
+POST /notifications/send_notification
+Params: { type: "User", id: 1, message: "Your report is ready!" }
+```
+
+---
+
+### 💡 What's happening:
+
+* The controller doesn’t care whether the object is a `User` or `Admin`.
+* It only assumes that the object **responds to `notify`**.
+* This is **Duck Typing** — treating different objects the same if they respond to a common method.
+
+---
+
+### ✅ You can extend easily:
+
+Add a `Manager` model tomorrow — just make sure it implements a `notify` method and no other part of the code needs to change. No inheritance, no interfaces — just behavior.
+
+---
+
+Would you like to see a **polymorphic notification system** using modules for comparison?
