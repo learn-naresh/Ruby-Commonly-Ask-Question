@@ -226,4 +226,95 @@ NotificationService.new(EmailSender.new).send_notification(user, "Hello")
 
 ---
 
-Would you like me to turn this into a cheat sheet PDF or markdown?
+Sure! The **Dependency Inversion Principle (DIP)** is one of the five SOLID principles of object-oriented design. It states:
+
+> **"High-level modules should not depend on low-level modules. Both should depend on abstractions."**
+> **"Abstractions should not depend on details. Details should depend on abstractions."**
+
+In simple terms, instead of high-level classes depending directly on low-level classes, **both should rely on interfaces or abstract classes**.
+
+---
+
+### ✅ Example in Ruby (Before Applying DIP)
+
+Let's say we have a simple notification system:
+
+```ruby
+class EmailService
+  def send_email(message)
+    puts "Sending email: #{message}"
+  end
+end
+
+class Notification
+  def initialize
+    @email_service = EmailService.new
+  end
+
+  def send(message)
+    @email_service.send_email(message)
+  end
+end
+
+# Usage
+Notification.new.send("Hello!")
+```
+
+#### ❌ Problem:
+
+* `Notification` is tightly coupled with `EmailService`.
+* If we want to use `SMSService` or `PushService`, we have to modify the `Notification` class — which violates **Open/Closed Principle** too.
+
+---
+
+### ✅ Refactored Version (Applying Dependency Inversion)
+
+```ruby
+# Step 1: Define an abstraction
+class MessageService
+  def send_message(_message)
+    raise NotImplementedError, "Must implement in subclass"
+  end
+end
+
+# Step 2: Implement low-level modules
+class EmailService < MessageService
+  def send_message(message)
+    puts "Sending email: #{message}"
+  end
+end
+
+class SMSService < MessageService
+  def send_message(message)
+    puts "Sending SMS: #{message}"
+  end
+end
+
+# Step 3: High-level module depends on abstraction
+class Notification
+  def initialize(service)
+    @service = service
+  end
+
+  def send(message)
+    @service.send_message(message)
+  end
+end
+
+# Usage
+email_notifier = Notification.new(EmailService.new)
+email_notifier.send("Welcome via email!")
+
+sms_notifier = Notification.new(SMSService.new)
+sms_notifier.send("Welcome via SMS!")
+```
+
+---
+
+### ✅ Benefits of DIP:
+
+* Loosely coupled code.
+* Easily extendable without modifying existing logic.
+* Promotes testing with mock implementations.
+
+Let me know if you want the same in **JavaScript**, **Java**, or **Python** too.
